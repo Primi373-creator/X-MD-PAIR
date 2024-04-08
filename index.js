@@ -60,7 +60,7 @@ app.get('/pairing', async (req, res) => {
             let c = output.data.split('/')[3];
             await delay(1000) 
             let session_id  = await sparky.sendMessage(sparky.user.id, { 
-               text: 'X-BOT-MD:'+c.trim()
+               text: 'alpha~'+c.trim()
             })
             //session quarted sender 
             let cc = `*⚠️ Don't Share The SESSION-ID ☝🏻 Shown Above*.\n\n*Web :* *https://x-md-qr-elctro-wizard.koyeb.app*\n\n\n*BY TEAM EX-BOT-Z 🗿*`;
@@ -69,26 +69,7 @@ app.get('/pairing', async (req, res) => {
 	 //const sparkyses = await sparky.sendMessage(sparky.user.id, { document: sessionsparky, mimetype: `application/json`, fileName: `creds.json` });
 			
 		
-				await sparky.sendMessage(sparky.user.id, { text: `_*Thanks for choosing X-BOT-MD*_
-
-*REPO*
-https://github.com/A-S-W-I-N-S-P-A-R-K-Y/X-BOT-MD
-            
-            
-*ᴊᴏɪɴ sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ ғᴏʀ ᴍᴏʀᴇ ϙᴜᴇʀʏ*
-https://chat.whatsapp.com/KMqXtMicl9uCgMuduidlXb
-            
-*Cʜᴀɴɴᴇʟ ʟɪɴᴋ*
-https://whatsapp.com/channel/0029Va9ZOf36rsR1Ym7O2x00
-            
-            
-*Replit Deployment Tutorial Link:*
-https://youtu.be/SfXJuSug4Lo?si=aRToYKZFZFzan0a0
-            
-*Heroku Deployment link:*
-            
-            
-*©ASWIN SPARKY*` }, {quoted: session_id});
+				await sparky.sendMessage(sparky.user.id, { text: `this is your session id do not share with anyone` }, {quoted: session_id});
 
 	await delay(3000);
         return await fs.emptyDirSync(__dirname + '/session');
